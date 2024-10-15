@@ -1,0 +1,27 @@
+﻿<Window x:Class="WPF_RPG.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_RPG"
+        mc:Ignorable="d"
+        Title="PROGRESSION" Height="720" Width="1280">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="200"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Content="Main menu" Grid.ColumnSpan="2"></Label>
+        <Label Grid.Row="1" Grid.Column="0" Content="Player" Background="#290EA0" BorderBrush="White" BorderThickness="5" FontSize="16" FontWeight="Black" Foreground="White"></Label>
+        <Label Grid.Row="1" Grid.Column="1" Content="World" Background="Beige" BorderBrush="White" BorderThickness="5" FontSize="16" FontWeight="Black"></Label>
+        <Label Grid.Row="2" Grid.Column="0" Content="Inventory" Background="#290EA0" BorderBrush="White" BorderThickness="5" FontSize="16" FontWeight="Black" Foreground="White"></Label>
+        <Label Grid.Row="2" Grid.Column="1" Content="Actions and Skills" Background="#290EA0" BorderBrush="White" BorderThickness="5" FontSize="16" FontWeight="Black" Foreground="White"></Label>
+        
+    </Grid>
+</Window>
