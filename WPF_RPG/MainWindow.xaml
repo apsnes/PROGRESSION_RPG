@@ -18,10 +18,38 @@
         </Grid.ColumnDefinitions>
 
         <Label Grid.Row="0" Grid.Column="0" Content="Main menu" Grid.ColumnSpan="2"></Label>
-        <Label Grid.Row="1" Grid.Column="0" Content="Player" Background="#290EA0" BorderBrush="White" BorderThickness="5" FontSize="16" FontWeight="Black" Foreground="White"></Label>
+        <!--<Border BorderBrush="White" BorderThickness="2">-->
+        <Grid Grid.Row="1" Grid.Column="0" Background="#290EA0" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Row="0" Grid.Column="0" Content="Name: " FontSize="12" FontWeight="Black" Foreground="White"/>
+            <Label Grid.Row="0" Grid.Column="1" Content="{Binding CurrentPlayer.Name}" FontSize="12" FontWeight="Black" Foreground="White"/>
+            <Label Grid.Row="1" Grid.Column="0" Content="Job: " FontSize="12" FontWeight="Black" Foreground="White"/>
+            <Label Grid.Row="1" Grid.Column="1" Content="{Binding CurrentPlayer.Job}" FontSize="12" FontWeight="Black" Foreground="White"/>
+            <Label Grid.Row="2" Grid.Column="0" Content="Health: " FontSize="12" FontWeight="Black" Foreground="White"/>
+            <Label Grid.Row="2" Grid.Column="1" Content="{Binding CurrentPlayer.HP}" FontSize="12" FontWeight="Black" Foreground="White"/>
+            <Label Grid.Row="3" Grid.Column="0" Content="Gold: " FontSize="12" FontWeight="Black" Foreground="White"/>
+            <Label Grid.Row="3" Grid.Column="1" Content="{Binding CurrentPlayer.Gold}" FontSize="12" FontWeight="Black" Foreground="White"/>
+            <Label Grid.Row="4" Grid.Column="0" Content="EXP: " FontSize="12" FontWeight="Black" Foreground="White"/>
+            <Label Grid.Row="4" Grid.Column="1" Content="{Binding CurrentPlayer.EXP}" FontSize="12" FontWeight="Black" Foreground="White"/>
+            <Label Grid.Row="5" Grid.Column="0" Content="Level: " FontSize="12" FontWeight="Black" Foreground="White"/>
+            <Label Grid.Row="5" Grid.Column="1" Content="{Binding CurrentPlayer.Level}" FontSize="12" FontWeight="Black" Foreground="White"/>
+
+        </Grid>
         <Label Grid.Row="1" Grid.Column="1" Content="World" Background="Beige" BorderBrush="White" BorderThickness="5" FontSize="16" FontWeight="Black"></Label>
         <Label Grid.Row="2" Grid.Column="0" Content="Inventory" Background="#290EA0" BorderBrush="White" BorderThickness="5" FontSize="16" FontWeight="Black" Foreground="White"></Label>
         <Label Grid.Row="2" Grid.Column="1" Content="Actions and Skills" Background="#290EA0" BorderBrush="White" BorderThickness="5" FontSize="16" FontWeight="Black" Foreground="White"></Label>
-        
     </Grid>
 </Window>

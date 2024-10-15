@@ -10,17 +10,19 @@ namespace Engine.ViewModels
     public class GameSession
 
     {
-        Player CurrentPlayer { get; set; }
+        public Player CurrentPlayer { get; set; }
 
         public GameSession()
         {
-            CurrentPlayer = new();
-            CurrentPlayer.Name = "Player One";
-            CurrentPlayer.Gold = 5000;
-            CurrentPlayer.EXP = 0;
-            CurrentPlayer.Level = 1;
-            CurrentPlayer.HP = 100;
-            CurrentPlayer.Job = "Mage";
+            CurrentPlayer = new Player()
+            {
+                Name = "Player One",
+                Gold = 5000,
+                EXP = 0,
+                Level = 1,
+                HP = 100,
+                Job = "Mage"
+            };
         }
     }
 }
