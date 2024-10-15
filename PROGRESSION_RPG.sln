@@ -5,6 +5,8 @@ VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF_RPG", "WPF_RPG\WPF_RPG.csproj", "{15CDF45D-7767-4704-A96E-D940A846FEEA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Engine", "Engine\Engine.csproj", "{9B3AE606-8E8D-49A1-9CD8-C6AC14D36BA5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{15CDF45D-7767-4704-A96E-D940A846FEEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15CDF45D-7767-4704-A96E-D940A846FEEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15CDF45D-7767-4704-A96E-D940A846FEEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B3AE606-8E8D-49A1-9CD8-C6AC14D36BA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B3AE606-8E8D-49A1-9CD8-C6AC14D36BA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B3AE606-8E8D-49A1-9CD8-C6AC14D36BA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B3AE606-8E8D-49A1-9CD8-C6AC14D36BA5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
