@@ -8,6 +8,10 @@
         FontSize="12pt"
         Title="PROGRESSION" Height="720" Width="1280">
 
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibility"/>
+    </Window.Resources>
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
@@ -48,7 +52,6 @@
             <Label Grid.Row="4" Grid.Column="1" Content="{Binding CurrentPlayer.EXP}" FontSize="12" FontWeight="Black" Foreground="White"/>
             <Label Grid.Row="5" Grid.Column="0" Content="Level: " FontSize="12" FontWeight="Black" Foreground="White"/>
             <Label Grid.Row="5" Grid.Column="1" Content="{Binding CurrentPlayer.Level}" FontSize="12" FontWeight="Black" Foreground="White"/>
-            <Button Grid.Row="6" Grid.Column="1" Content="Add EXP" Click="ButtonBase_OnClick"></Button>
         </Grid>
 
         <Grid Grid.Row="1" Grid.Column="1" Background="Beige">
@@ -76,6 +79,37 @@
 
         </Grid>
         <Label Grid.Row="2" Grid.Column="0" Content="Inventory" Background="#290EA0" BorderBrush="White" BorderThickness="5" FontSize="16" FontWeight="Black" Foreground="White"></Label>
-        <Label Grid.Row="2" Grid.Column="1" Content="Actions and Skills" Background="#290EA0" BorderBrush="White" BorderThickness="5" FontSize="16" FontWeight="Black" Foreground="White"></Label>
+        <Grid Grid.Row="2" Grid.Column="1" Background="#290EA0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="175"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Row="0" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Row="0" Grid.Column="0" FontSize="12" Foreground="White" Content="Movement Controls" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>   
+                <Button Grid.Row="1" Grid.Column="1" Visibility="{Binding HasLocationNorth, Converter={StaticResource BooleanToVisibility}}" BorderBrush="White" Click="OnClick_MoveNorth" BorderThickness="3" Foreground="White" Background="Black" Content="North" Margin="1" Height="50" Width="50" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Button Grid.Row="2" Grid.Column="0" Visibility="{Binding HasLocationWest, Converter={StaticResource BooleanToVisibility}}" BorderBrush="White" Click="OnClick_MoveWest" BorderThickness="3" Foreground="White" Background="Black" Content="West" Height="50" Width="50" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Button Grid.Row="3" Grid.Column="1" Visibility="{Binding HasLocationSouth, Converter={StaticResource BooleanToVisibility}}" BorderBrush="White" Click="OnClick_MoveSouth" BorderThickness="3" Foreground="White" Background="Black" Content="South" Height="50" Width="50" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <Button Grid.Row="2" Grid.Column="2" Visibility="{Binding HasLocationEast, Converter={StaticResource BooleanToVisibility}}" BorderBrush="White" Click="OnClick_MoveEast" BorderThickness="3" Foreground="White" Background="Black" Content="East" Height="50" Width="50" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+
+
+            </Grid>
+
+        </Grid>
     </Grid>
 </Window>

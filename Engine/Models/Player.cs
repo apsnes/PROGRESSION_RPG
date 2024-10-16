@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Engine.Models
 {
-    public class Player : INotifyPropertyChanged
+    public class Player : BaseClass
     {
         private int _exp;
         private int _level;
@@ -21,7 +21,7 @@ namespace Engine.Models
             set
             {
                 _name = value;
-                OnPropertyChanged("Name");
+                OnPropertyChanged(nameof(Name));
             }
         }
         public string Job
@@ -30,7 +30,7 @@ namespace Engine.Models
             set
             {
                 _job = value;
-                OnPropertyChanged("Job");
+                OnPropertyChanged(nameof(Job));
             }
         }
         public int HP {
@@ -38,7 +38,7 @@ namespace Engine.Models
             set
             {
                 _hp = value;
-                OnPropertyChanged("HP");
+                OnPropertyChanged(nameof(HP));
             }
         }
         public int EXP
@@ -47,7 +47,7 @@ namespace Engine.Models
             set
             {
                 _exp = value;
-                OnPropertyChanged("EXP");
+                OnPropertyChanged(nameof(EXP));
             }
         }
         public int Gold
@@ -56,7 +56,7 @@ namespace Engine.Models
             set
             {
                 _gold = value;
-                OnPropertyChanged("Gold");
+                OnPropertyChanged(nameof(Gold));
             }
         }
         public int Level
@@ -65,15 +65,8 @@ namespace Engine.Models
             set
             {
                 _level = value;
-                OnPropertyChanged("Level");
+                OnPropertyChanged(nameof(Level));
             }
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected virtual void OnPropertyChanged (string propertyName)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }
