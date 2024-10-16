@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\Locations\ComingSoon.png" />
     <None Remove="Images\Locations\FirstHouse.png" />
   </ItemGroup>
 
@@ -16,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\Locations\ComingSoon.png" />
     <Resource Include="Images\Locations\FirstHouse.png" />
   </ItemGroup>
 
