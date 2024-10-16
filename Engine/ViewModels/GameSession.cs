@@ -11,6 +11,7 @@ namespace Engine.ViewModels
 
     {
         public Player CurrentPlayer { get; set; }
+        public Location CurrentLocation { get; set; }
 
         public GameSession()
         {
@@ -23,6 +24,16 @@ namespace Engine.ViewModels
                 HP = 100,
                 Job = "Mage"
             };
+
+            CurrentLocation = new Location()
+            {
+                Name = "Home",
+                XCoordinate = 0,
+                YCoordinate = -1,
+                Description = "Sanctuary",
+                ImageName = "pack://application:,,,/Engine;component/Images/Locations/FirstHouse.png"
+            };
+
         }
     }
 }
