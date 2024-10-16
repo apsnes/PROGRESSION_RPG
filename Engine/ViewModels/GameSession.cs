@@ -61,7 +61,7 @@ namespace Engine.ViewModels
 
         public GameSession()
         {
-            CurrentPlayer = new Player()
+            CurrentPlayer = new Player
             {
                 Name = "Player One",
                 Gold = 5000,
@@ -70,11 +70,9 @@ namespace Engine.ViewModels
                 HP = 100,
                 Job = "Mage"
             };
-
-            WorldFactory factory = new WorldFactory();
-            CurrentWorld = factory.CreateWorld();
-
-            CurrentLocation = CurrentWorld.LocationAt(-1, -2);
+            CurrentWorld = WorldFactory.CreateWorld();
+            CurrentLocation = CurrentWorld.LocationAt(0, 0);
+            CurrentPlayer.Inventory.Add(ItemFactory.CreateGameItem(1001));
         }
 
         public void MoveNorth()

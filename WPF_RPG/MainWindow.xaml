@@ -78,7 +78,21 @@
             </Border>
 
         </Grid>
-        <Label Grid.Row="2" Grid.Column="0" Content="Inventory" Background="#290EA0" BorderBrush="White" BorderThickness="5" FontSize="16" FontWeight="Black" Foreground="White"></Label>
+        <Grid Grid.Row="2" Grid.Column="0" Background="#290EA0">
+            <TabControl>
+                <TabItem Header="Inventory">
+                    <DataGrid ItemsSource="{Binding CurrentPlayer.Inventory}" AutoGenerateColumns="False" HeadersVisibility="Column">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Description" Binding="{Binding Name}" Width="*"/>
+                            <DataGridTextColumn Header="Item Level" Binding="{Binding ItemLevel}" Width="Auto"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </TabItem>
+                <TabItem Header="Objective">
+
+                </TabItem>
+            </TabControl>
+        </Grid>
         <Grid Grid.Row="2" Grid.Column="1" Background="#290EA0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>

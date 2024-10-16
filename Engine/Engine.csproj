@@ -8,17 +8,20 @@
 
   <ItemGroup>
     <None Remove="Images\Locations\ComingSoon.png" />
+    <None Remove="Images\Locations\evilbun.png" />
     <None Remove="Images\Locations\FirstHouse.png" />
+    <None Remove="Images\Weapons\woodenstaff.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Images\Monsters\" />
-    <Folder Include="Images\Weapons\" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Images\Locations\ComingSoon.png" />
+    <Resource Include="Images\Locations\evilbun.png" />
     <Resource Include="Images\Locations\FirstHouse.png" />
+    <Resource Include="Images\Weapons\woodenstaff.png" />
   </ItemGroup>
 
 </Project>
