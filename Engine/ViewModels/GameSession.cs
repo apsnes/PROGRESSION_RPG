@@ -25,6 +25,7 @@ namespace Engine.ViewModels
                 OnPropertyChanged(nameof(HasLocationWest));
                 OnPropertyChanged(nameof(HasLocationSouth));
                 OnPropertyChanged(nameof(HasLocationEast));
+                GivePlayerObjectiveAtLocation();
             }
         }
         public World CurrentWorld { get; set; }
@@ -101,6 +102,16 @@ namespace Engine.ViewModels
             if (HasLocationEast)
             {
                 CurrentLocation = CurrentWorld.LocationAt(CurrentLocation.XCoordinate + 1, CurrentLocation.YCoordinate);
+            }
+        }
+        private void GivePlayerObjectiveAtLocation()
+        {
+            foreach (Objective objective in CurrentLocation.ObecjtivesHere)
+            {
+                if (!CurrentPlayer.Objectives.Any(o => o.PlayerObjective.ID == objective.ID))
+                {
+                    CurrentPlayer.Objectives.Add(new ObjectiveStatus(objective));
+                }
             }
         }
     }

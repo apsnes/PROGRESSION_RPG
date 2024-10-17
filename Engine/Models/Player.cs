@@ -70,9 +70,11 @@ namespace Engine.Models
             }
         }
         public ObservableCollection<GameItem> Inventory { get; set; }
+        public ObservableCollection<ObjectiveStatus> Objectives { get; set; }
         public Player()
         {
             Inventory = new ObservableCollection<GameItem>();
+            Objectives = new ObservableCollection<ObjectiveStatus>();
         }
     }
 }
