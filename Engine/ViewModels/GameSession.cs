@@ -7,12 +7,13 @@ using System.Threading.Tasks;
 using Engine.Factories;
 using System.Security.Cryptography.X509Certificates;
 using System.ComponentModel;
+using Engine.EventArgs;
 
 namespace Engine.ViewModels
 {
     public class GameSession : BaseClass
-
     {
+        public event EventHandler<GameMessageEventArgs> OnMessageRaised;
         public World CurrentWorld { get; set; }
         private Location _currentLocation;
         private Monsters _currentMonster;
@@ -40,6 +41,19 @@ namespace Engine.ViewModels
                 _currentMonster = value;
                 OnPropertyChanged(nameof(CurrentMonster));
                 OnPropertyChanged(nameof(HasMonster));
+                if (CurrentMonster != null)
+                {
+                    RaiseMessage("");
+                    string currMonster = CurrentMonster.Name;
+                    if (currMonster[0] == 'A' || currMonster[0] == 'E' || currMonster[0] == 'I' || currMonster[0] == 'O' || currMonster[0] == 'U')
+                    {
+                        RaiseMessage($"There's an {currMonster} here!");
+                    }
+                    else
+                    {
+                        RaiseMessage($"There's a {currMonster} here!");
+                    }
+                }
             }
         }
         public bool HasMonster => CurrentMonster != null;
@@ -130,6 +144,10 @@ namespace Engine.ViewModels
         private void GetMonsterAtLocation()
         {
             CurrentMonster = CurrentLocation.GetMonster();
+        }
+        private void RaiseMessage(string message)
+        {
+            OnMessageRaised?.Invoke(this, new GameMessageEventArgs(message));
         }
     }
 }

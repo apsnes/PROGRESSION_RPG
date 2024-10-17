@@ -69,6 +69,19 @@
                 <ColumnDefinition Width="4*"/>
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
+            
+            <!-- Game Messages -->
+            <Border Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" BorderBrush="White" BorderThickness="3">
+                <RichTextBox x:Name="GameMessages" Background="#290EA0" Foreground="White" VerticalScrollBarVisibility="Auto">
+                    <RichTextBox.Resources>
+                        <Style TargetType="{x:Type Paragraph}">
+                            <Setter Property="Margin" Value="0"/>
+                        </Style>
+                    </RichTextBox.Resources>
+                </RichTextBox>
+                
+            </Border>
+            
             <!-- Current Map Information -->
             <Border Grid.Row="0" Grid.Column="1" BorderBrush="White" BorderThickness="2">
                 <Grid Margin="3">
