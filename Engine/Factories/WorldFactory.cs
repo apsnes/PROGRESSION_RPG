@@ -25,7 +25,7 @@ namespace Engine.Factories
 
             newWorld.AddLocation(3, -2, "TBD Road", "Danger", "pack://application:,,,/Engine;component/Images/Locations/ComingSoon.png");
 
-            newWorld.AddLocation(3, -1, "TBD Town", "Sanctuary", "pack://application:,,,/Engine;component/Images/Locations/ComingSoon.png");
+            newWorld.AddLocation(3, -1, "Rabbit Hop Town", "Sanctuary", "pack://application:,,,/Engine;component/Images/Locations/ComingSoon.png");
             newWorld.LocationAt(3, -1).ObecjtivesHere.Add(ObjectiveFactory.GetObjective(1));
 
             newWorld.AddLocation(2, -1, "TBD Town Markets", "Sanctuary", "pack://application:,,,/Engine;component/Images/Locations/ComingSoon.png");
