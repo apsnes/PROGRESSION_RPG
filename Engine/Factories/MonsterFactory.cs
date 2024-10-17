@@ -8,27 +8,19 @@ using Engine.Models;
 namespace Engine.Factories
 {
     public static class MonsterFactory
-    {
-        private static List<Monsters> _monsters;
-
-        static MonsterFactory()
-        {
-            _monsters =
-            [
-                new Monsters(1, "Evil Bunny", "evilbun.png", 1000, 1000, 1000, 2500, 10),
-            ];
-        }
-
+    { 
         public static Monsters CreateMonster(int monsterID)
         {
-            Monsters monster = _monsters.FirstOrDefault(monster => monster.MonsterID == monsterID);
-            if (monster != null)
+            switch (monsterID)
             {
-                return monster.Clone();
+                case 1:
+                    Monsters evilBun = new Monsters("Evil Bunny", "evilbun.png", 1000, 1000, 1000, 2500, 10);
+                    AddLootItem(evilBun, 1002, 100, 1);
+                    return evilBun;
+                default:
+                    throw new ArgumentException(string.Format("MonsterType '{0}' does not exist", monsterID));
             }
-            return null;
         }
-
         public static void AddLootItem(Monsters monster, int itemID, int percentage, int maxCount)
         {
             if (RandomNumberGenerator.NumberBetween(1, 100) <= percentage)

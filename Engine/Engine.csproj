@@ -16,7 +16,9 @@
   <ItemGroup>
     <Resource Include="Images\Locations\ComingSoon.png" />
     <Resource Include="Images\Locations\FirstHouse.png" />
-    <Resource Include="Images\Monsters\evilbun.png" />
+    <Resource Include="Images\Monsters\evilbun.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\Weapons\woodenstaff.png" />
   </ItemGroup>
 

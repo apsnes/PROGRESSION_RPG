@@ -17,6 +17,7 @@ namespace Engine.Factories
             newWorld.AddLocation(0, -1, "Stone Forest", "Danger", "pack://application:,,,/Engine;component/Images/Locations/ComingSoon.png");
 
             newWorld.AddLocation(0, -2, "Evil Bunny's Lair", "Highly Dangerous", "pack://application:,,,/Engine;component/Images/Locations/ComingSoon.png");
+            newWorld.LocationAt(0, -2).AddMonster(1, 100);
 
             newWorld.AddLocation(1, -2, "Tranquil Respite", "Sanctuary", "pack://application:,,,/Engine;component/Images/Locations/ComingSoon.png");
 

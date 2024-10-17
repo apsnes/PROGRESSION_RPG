@@ -3,6 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewModels="clr-namespace:Engine.ViewModels;assembly=Engine"
+        d:DataContext="{d:DesignInstance viewModels:GameSession}"
         xmlns:local="clr-namespace:WPF_RPG"
         mc:Ignorable="d"
         FontSize="12pt"
@@ -23,7 +25,10 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
+        <!-- Main Menu -->
         <Label Grid.Row="0" Grid.Column="0" Content="Main menu" Grid.ColumnSpan="2"></Label>
+        
+        <!-- Player Stats -->
         <Grid Grid.Row="1" Grid.Column="0" Background="#290EA0" >
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
@@ -53,7 +58,8 @@
             <Label Grid.Row="5" Grid.Column="0" Content="Level: " FontSize="12" FontWeight="Black" Foreground="White"/>
             <Label Grid.Row="5" Grid.Column="1" Content="{Binding CurrentPlayer.Level}" FontSize="12" FontWeight="Black" Foreground="White"/>
         </Grid>
-
+        
+        <!-- Gameplay Window -->
         <Grid Grid.Row="1" Grid.Column="1" Background="Beige">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
@@ -63,7 +69,7 @@
                 <ColumnDefinition Width="4*"/>
                 <ColumnDefinition Width="1*"/>
             </Grid.ColumnDefinitions>
-
+            <!-- Current Map Information -->
             <Border Grid.Row="0" Grid.Column="1" BorderBrush="White" BorderThickness="2">
                 <Grid Margin="3">
                     <Grid.RowDefinitions>
@@ -76,8 +82,26 @@
                     <TextBlock Grid.Row="2" HorizontalAlignment="Center" Text="{Binding CurrentLocation.Description}"/>
                 </Grid>
             </Border>
-
+            <!-- Current Monster Information -->
+            <Border Grid.Row="1" Grid.Column="1" BorderBrush="White" BorderThickness="2">
+                <Grid Margin="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" HorizontalAlignment="Center" Height="Auto" Text="{Binding CurrentMonster.Name}"/>
+                    <Image Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="125" Width="125" Source="{Binding CurrentMonster.ImageName}"/>
+                    <StackPanel Grid.Row="2" Visibility="{Binding HasMonster, Converter={StaticResource BooleanToVisibility}}" HorizontalAlignment="Center" Orientation="Horizontal">
+                        <TextBlock Text="HP: "/>
+                        <TextBlock Text="{Binding CurrentMonster.HPPercentage}"/>
+                        <TextBlock>%</TextBlock>
+                    </StackPanel>
+                </Grid>
+            </Border>
         </Grid>
+        
+        <!-- Inventory and Objectives -->
         <Grid Grid.Row="2" Grid.Column="0" Background="#290EA0">
             <TabControl>
                 <TabItem Header="Inventory" FontSize="14" HorizontalAlignment="Center">
@@ -98,6 +122,8 @@
                 </TabItem>
             </TabControl>
         </Grid>
+        
+        <!-- Player Actions and Controls -->
         <Grid Grid.Row="2" Grid.Column="1" Background="#290EA0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
