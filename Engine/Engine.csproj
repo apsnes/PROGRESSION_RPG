@@ -9,6 +9,11 @@
   <ItemGroup>
     <None Remove="Images\Locations\ComingSoon.png" />
     <None Remove="Images\Locations\FirstHouse.png" />
+    <None Remove="Images\Locations\localtrader.png" />
+    <None Remove="Images\Locations\rabbitHopMarkets.png" />
+    <None Remove="Images\Locations\rabbithoptrail.png" />
+    <None Remove="Images\Locations\stoneForest.png" />
+    <None Remove="Images\Locations\yard.png" />
     <None Remove="Images\Monsters\evilbun.png" />
     <None Remove="Images\Weapons\woodenstaff.png" />
   </ItemGroup>
@@ -16,6 +21,21 @@
   <ItemGroup>
     <Resource Include="Images\Locations\ComingSoon.png" />
     <Resource Include="Images\Locations\FirstHouse.png" />
+    <Resource Include="Images\Locations\localtrader.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Locations\rabbitHopMarkets.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Locations\rabbithoptrail.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Locations\stoneForest.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Locations\yard.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\Monsters\evilbun.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>

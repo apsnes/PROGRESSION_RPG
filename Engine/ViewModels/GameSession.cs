@@ -45,7 +45,11 @@ namespace Engine.ViewModels
                 {
                     RaiseMessage("");
                     string currMonster = CurrentMonster.Name;
-                    if (currMonster[0] == 'A' || currMonster[0] == 'E' || currMonster[0] == 'I' || currMonster[0] == 'O' || currMonster[0] == 'U')
+                    if (currMonster == "Demonic Bunny of Purgatory")
+                    {
+                        RaiseMessage($"Looks like the Demonic Bunny is here, beware!!!");
+                    }
+                    else if (currMonster[0] == 'A' || currMonster[0] == 'E' || currMonster[0] == 'I' || currMonster[0] == 'O' || currMonster[0] == 'U')
                     {
                         RaiseMessage($"There's an {currMonster} here!");
                     }
