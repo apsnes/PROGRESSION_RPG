@@ -36,6 +36,10 @@ namespace Engine.Factories
             GameItem item = _gameItems.FirstOrDefault(item => item.ItemID == itemID);
             if (item != null)
             {
+                if (item is Weapon)
+                {
+                    return (item as Weapon).Clone();
+                }
                 return item.Clone();
             }
             return null;

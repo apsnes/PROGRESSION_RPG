@@ -150,6 +150,23 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="175"/>
                 </Grid.ColumnDefinitions>
+                
+                <!-- Combat Controls -->
+                <Grid Grid.Row="0" Grid.Column="0" Visibility="{Binding HasMonster, Converter={StaticResource BooleanToVisibility}}" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="150"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="50"/>
+                    </Grid.ColumnDefinitions>
+                    <ComboBox Grid.Row="0" Grid.Column="0" ItemsSource="{Binding CurrentPlayer.Weapons}" SelectedItem="{Binding CurrentWeapon}" DisplayMemberPath="Name" SelectedValuePath="ID"/>
+                    <Button Grid.Row="0" Grid.Column="2" Content="Attack" Click="OnClickAttackMonster"/>
+                </Grid>
+                
+                <!-- Movement Controls -->
                 <Grid Grid.Row="0" Grid.Column="1">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="25"/>
@@ -169,7 +186,6 @@
                     <Button Grid.Row="2" Grid.Column="0" Visibility="{Binding HasLocationWest, Converter={StaticResource BooleanToVisibility}}" BorderBrush="White" Click="OnClick_MoveWest" BorderThickness="3" Foreground="White" Background="Black" Content="West" Height="50" Width="50" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     <Button Grid.Row="3" Grid.Column="1" Visibility="{Binding HasLocationSouth, Converter={StaticResource BooleanToVisibility}}" BorderBrush="White" Click="OnClick_MoveSouth" BorderThickness="3" Foreground="White" Background="Black" Content="South" Height="50" Width="50" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     <Button Grid.Row="2" Grid.Column="2" Visibility="{Binding HasLocationEast, Converter={StaticResource BooleanToVisibility}}" BorderBrush="White" Click="OnClick_MoveEast" BorderThickness="3" Foreground="White" Background="Black" Content="East" Height="50" Width="50" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
 
                 </Grid>
             </Grid>

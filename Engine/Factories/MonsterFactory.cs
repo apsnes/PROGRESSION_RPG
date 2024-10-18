@@ -14,7 +14,7 @@ namespace Engine.Factories
             switch (monsterID)
             {
                 case 1:
-                    Monsters evilBun = new Monsters("Evil Bunny", "evilbun.png", 1000, 1000, 1000, 2500, 10);
+                    Monsters evilBun = new Monsters("Evil Bunny", "evilbun.png", 200, 200, 1000, 2500, 10);
                     AddLootItem(evilBun, 1002, 100, 1);
                     return evilBun;
                 case 2:
@@ -22,7 +22,7 @@ namespace Engine.Factories
                     AddLootItem(demonBun, 1003, 100, 1);
                     return demonBun;
                 case 3:
-                    Monsters fireyImp = new Monsters("Firey Imp", "ComingSoon.png", 400, 400, 100, 200, 3);
+                    Monsters fireyImp = new Monsters("Firey Imp", "ComingSoon.png", 150, 150, 100, 200, 4);
                     AddLootItem(fireyImp, 2002, 80, 2);
                     return fireyImp;
                 default:
