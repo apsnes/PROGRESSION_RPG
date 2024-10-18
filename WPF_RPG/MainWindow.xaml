@@ -171,7 +171,7 @@
                         <ComboBox Grid.Row="0" Grid.Column="1" VerticalAlignment="Center" ItemsSource="{Binding CurrentPlayer.Food}" SelectedItem="{Binding CurrentItem}" DisplayMemberPath="Name" SelectedValuePath="ID"/>
                         <Button Grid.Row="1" Grid.Column="1" VerticalAlignment="Center" Content="Use" Click="OnClickUse"/>
                         <Image Grid.Row="0" Grid.Column="3" Margin="-40" Grid.RowSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center" Height="125" Width="125" Source="{Binding CurrentWeapon.ImageName}"/>
-                        <Button Grid.Row="0" Grid.Column="0" BorderBrush="White" BorderThickness="3" Visibility="{Binding HasNPC, Converter={StaticResource BooleanToVisibility}}" Foreground="White" Background="Black" Content="Trade" Margin="20" Height="80" Width="150" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        <Button Grid.Row="0" Grid.Column="0" BorderBrush="White" BorderThickness="3" Visibility="{Binding HasNPC, Converter={StaticResource BooleanToVisibility}}" Foreground="White" Click="OnClickDisplayTradeScreen" Background="Black" Content="Trade" Margin="20" Height="80" Width="150" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     </Grid>
                 </Grid>
 

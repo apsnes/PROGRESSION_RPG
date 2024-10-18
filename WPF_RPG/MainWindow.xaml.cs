@@ -55,5 +55,12 @@ namespace WPF_RPG
         {
             _gameSession.UseItem();
         }
+        private void OnClickDisplayTradeScreen(object sender, RoutedEventArgs e)
+        {
+            TradeScreen trade = new TradeScreen();
+            trade.Owner = this;
+            trade.DataContext = _gameSession;
+            trade.ShowDialog();
+        }
     }
 }

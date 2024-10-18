@@ -196,6 +196,12 @@ namespace Engine.ViewModels
                         }
                         RaiseMessage($"You completed the objective: {objective.Name}.");
                         CurrentPlayer.EXP += objective.RewardEXP;
+                        if (CurrentPlayer.EXP >= 1000)
+                        {
+                            CurrentPlayer.EXP = CurrentPlayer.EXP - 1000;
+                            CurrentPlayer.Level += 1;
+                            CurrentPlayer.HP = CurrentPlayer.Level * 100;
+                        }
                         CurrentPlayer.Gold += objective.RewardGold;
                         foreach(ItemQuantity itemQuantity in objective.RewardItems)
                         {
@@ -247,6 +253,12 @@ namespace Engine.ViewModels
                     RaiseMessage("");
                     RaiseMessage($"You defeated the {CurrentMonster.Name}!");
                     CurrentPlayer.EXP += CurrentMonster.RewardEXP;
+                    if (CurrentPlayer.EXP >= 1000)
+                    {
+                        CurrentPlayer.EXP = CurrentPlayer.EXP - 1000;
+                        CurrentPlayer.Level += 1;
+                        CurrentPlayer.HP = CurrentPlayer.Level * 100;
+                    }
                     CurrentPlayer.Gold += CurrentMonster.RewardGold;
                     RaiseMessage($"You received {CurrentMonster.RewardEXP} EXP and {CurrentMonster.RewardGold} gold.");
                     foreach (ItemQuantity itemQuantity in CurrentMonster.Inventory)
