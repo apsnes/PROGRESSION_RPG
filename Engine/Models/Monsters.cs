@@ -35,7 +35,7 @@ namespace Engine.Models
 
         public Monsters(string name, string imageName, int maxHp, int hp, int rewardEXP, int rewardGold, int dmg)
         {
-            Name = name; ImageName = string.Format("pack://application:,,,/Engine;component/Images/Monsters/{0}", imageName); MaxHP = maxHp; HP = hp; RewardEXP = rewardEXP; RewardGold = rewardGold; DamagePower = dmg; Inventory = new ObservableCollection<ItemQuantity>();
+            Name = name; ImageName = $"pack://application:,,,/Engine;component/Images/Monsters/{imageName}"; MaxHP = maxHp; HP = hp; RewardEXP = rewardEXP; RewardGold = rewardGold; DamagePower = dmg; Inventory = new ObservableCollection<ItemQuantity>();
         }
     }
 }

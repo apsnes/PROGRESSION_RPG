@@ -10,12 +10,12 @@ namespace Engine.Models
     {
         private List<Location> _locations = new List<Location>();
 
-        internal void AddLocation(int x, int y, string name, string desc, string ImageName)
+        internal void AddLocation(int x, int y, string name, string desc, string imageName)
         {
             Location newLocation = new Location();
             newLocation.Name = name;
             newLocation.Description = desc;
-            newLocation.ImageName = ImageName;
+            newLocation.ImageName = $"pack://application:,,,/Engine;component/Images/Locations/{imageName}";
             newLocation.XCoordinate = x;
             newLocation.YCoordinate = y;
             _locations.Add(newLocation);
