@@ -38,8 +38,12 @@ namespace Engine.Factories
             localTrader.AddItemToInventory(ItemFactory.CreateGameItem(3001));
             localTrader.AddItemToInventory(ItemFactory.CreateGameItem(3001));
 
+            NPC fountain = new NPC("Fountain of Life");
+            fountain.AddItemToInventory(ItemFactory.CreateGameItem(3004));
+
             AddNPCToList(mango);
             AddNPCToList(localTrader);
+            AddNPCToList(fountain);
         }
 
         public static NPC GetNPCByName(string name)

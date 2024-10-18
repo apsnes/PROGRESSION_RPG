@@ -21,6 +21,7 @@ namespace Engine.Factories
             newWorld.LocationAt(0, -2).AddMonster(1, 100);
 
             newWorld.AddLocation(1, -2, "Tranquil Respite", "Sanctuary", "ComingSoon.png");
+            newWorld.LocationAt(1, -2).NPCHere = NPCFactory.GetNPCByName("Fountain of Life");
 
             newWorld.AddLocation(2, -2, "TBD Road", "Danger", "ComingSoon.png");
             newWorld.LocationAt(2, -2).AddMonster(3, 6);

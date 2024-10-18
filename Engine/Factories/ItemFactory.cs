@@ -24,6 +24,7 @@ namespace Engine.Factories
             _gameItems.Add(new Food(3001, "Mushroom Soup", 250, 1, 50));
             _gameItems.Add(new Food(3002, "Carrot Surprise", 1000, 1, 200));
             _gameItems.Add(new Food(3003, "Rabbit Queen's Banquet", 10000, 1, 2000));
+            _gameItems.Add(new Food(3004, "Lifesessence nectar", 0, 1, 1000));
 
             _gameItems.Add(new GameItem(2001, "Wild Mushroom", 50, 1));
             _gameItems.Add(new GameItem(2002, "Imp Skeleton", 110, 1));
