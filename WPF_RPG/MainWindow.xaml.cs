@@ -51,5 +51,9 @@ namespace WPF_RPG
         {
             _gameSession.AttackCurrentMonster();
         }
+        private void OnClickUse(object sender, RoutedEventArgs e)
+        {
+            _gameSession.UseItem();
+        }
     }
 }

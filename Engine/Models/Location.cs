@@ -16,6 +16,7 @@ namespace Engine.Models
         public string ImageName { get; set; }
         public List<Objective> ObecjtivesHere { get; set; } = new List<Objective>();
         public List<MonsterEncounter> MonstersHere { get; set; } = new List<MonsterEncounter>();
+        public NPC NPCHere { get; set; }
 
         public void AddMonster(int monsterID, int chance)
         {

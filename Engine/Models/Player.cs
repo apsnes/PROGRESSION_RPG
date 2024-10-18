@@ -72,6 +72,7 @@ namespace Engine.Models
         public ObservableCollection<GameItem> Inventory { get; set; }
         public ObservableCollection<ObjectiveStatus> Objectives { get; set; }
         public List<GameItem> Weapons => Inventory.Where(i => i is Weapon).ToList();
+        public List<GameItem> Food => Inventory.Where(f => f is Food).ToList();
         public Player()
         {
             Inventory = new ObservableCollection<GameItem>();
@@ -81,11 +82,13 @@ namespace Engine.Models
         {
             Inventory.Add(item);
             OnPropertyChanged(nameof(Weapons));
+            OnPropertyChanged(nameof(Food));
         }
         public void RemoveItemFromInventory(GameItem item)
         {
             Inventory.Remove(item);
             OnPropertyChanged(nameof(Weapons));
+            OnPropertyChanged(nameof(Food));
         }
         public bool HasTheseItems(List<ItemQuantity> items)
         {

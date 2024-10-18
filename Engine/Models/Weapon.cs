@@ -10,19 +10,18 @@ namespace Engine.Models
     {
         public int Power { get; set; }
         public int Defence { get; set; }
+        public string ImageName { get; set; }
 
-        public Weapon(int itemID, string name, int price, int itemLevel, int power, int defence) : base(itemID, name, price, itemLevel)
+        public Weapon(int itemID, string name, string imageName, int price, int itemLevel, int power, int defence) : base(itemID, name, price, itemLevel)
         {
             Power = power;
             Defence = defence;
+            ImageName = imageName;
         }
 
         public new Weapon Clone()
         {
-            return new Weapon(ItemID, Name, Price, ItemLevel, Power, Defence);
+            return new Weapon(ItemID, Name, ImageName, Price, ItemLevel, Power, Defence);
         }
-
-
-
     }
 }

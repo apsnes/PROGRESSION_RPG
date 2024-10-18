@@ -15,6 +15,7 @@
     <None Remove="Images\Locations\stoneForest.png" />
     <None Remove="Images\Locations\yard.png" />
     <None Remove="Images\Monsters\evilbun.png" />
+    <None Remove="Images\Weapons\tempWeapon.png" />
     <None Remove="Images\Weapons\woodenstaff.png" />
   </ItemGroup>
 
@@ -39,7 +40,12 @@
     <Resource Include="Images\Monsters\evilbun.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\Weapons\woodenstaff.png" />
+    <Resource Include="Images\Weapons\tempWeapon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Weapons\woodenStaff.png">
+      <CopyToOutputDirectory></CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>

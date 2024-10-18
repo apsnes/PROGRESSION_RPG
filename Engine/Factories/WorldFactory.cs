@@ -33,6 +33,7 @@ namespace Engine.Factories
             newWorld.LocationAt(3, -1).ObecjtivesHere.Add(ObjectiveFactory.GetObjective(2));
 
             newWorld.AddLocation(2, -1, "Rabbit Hop Town Markets", "Sanctuary", "rabbitHopMarkets.png");
+            newWorld.LocationAt(2, -1).NPCHere = NPCFactory.GetNPCByName("Mango");
 
             newWorld.AddLocation(4, -1, "TBD Town", "Sanctuary", "ComingSoon.png");
 
@@ -45,6 +46,7 @@ namespace Engine.Factories
             newWorld.AddLocation(-1, 0, "Yard", "Sanctuary", "yard.png");
 
             newWorld.AddLocation(0, 1, "Local Trader", "Sanctuary", "localtrader.png");
+            newWorld.LocationAt(0, 1).NPCHere = NPCFactory.GetNPCByName("Local Trader");
 
             return newWorld;
         }

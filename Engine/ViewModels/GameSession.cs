@@ -17,6 +17,9 @@ namespace Engine.ViewModels
         public World CurrentWorld { get; set; }
         private Location _currentLocation;
         private Monsters _currentMonster;
+        private Weapon _currentWeapon;
+        private Food _currentItem;
+        private NPC _currentNPC;
         public Player CurrentPlayer { get; set; }
         public Location CurrentLocation
         {
@@ -32,6 +35,7 @@ namespace Engine.ViewModels
                 CompleteObjectiveAtLocation();
                 GivePlayerObjectiveAtLocation();
                 GetMonsterAtLocation();
+                CurrentNPC = CurrentLocation.NPCHere;
             }
         }
         public Monsters CurrentMonster
@@ -61,8 +65,38 @@ namespace Engine.ViewModels
                 }
             }
         }
-        public Weapon CurrentWeapon { get; set; }
+        public NPC CurrentNPC
+        {
+            get { return _currentNPC; }
+            set
+            {
+                _currentNPC = value;
+                OnPropertyChanged(nameof(CurrentNPC));
+                OnPropertyChanged(nameof(HasNPC));
+            }
+        }
+        public Weapon CurrentWeapon
+        {
+            get { return _currentWeapon;  }
+            set
+            {
+                _currentWeapon = value;
+                OnPropertyChanged(nameof(CurrentWeapon));
+            }
+        }
+        public Food CurrentItem
+        {
+            get { return _currentItem; }
+            set
+            {
+                _currentItem = value;
+                OnPropertyChanged(nameof(CurrentItem));
+                OnPropertyChanged(nameof(HasItem));
+            }
+        }
         public bool HasMonster => CurrentMonster != null;
+        public bool HasNPC => CurrentNPC != null;
+        public bool HasItem => CurrentItem != null;
 
         public bool HasLocationNorth => CurrentWorld.LocationAt(CurrentLocation.XCoordinate, CurrentLocation.YCoordinate + 1) != null;
 
@@ -251,6 +285,15 @@ namespace Engine.ViewModels
                         CurrentPlayer.HP = CurrentPlayer.Level * 100;
                     }
                 }
+            }
+        }
+        public void UseItem()
+        {
+            if (CurrentItem != null)
+            {               
+                CurrentPlayer.HP = Math.Min(CurrentPlayer.HP += CurrentItem.Vitality, CurrentPlayer.Level * 100);
+                CurrentPlayer.RemoveItemFromInventory(CurrentItem);
+                CurrentItem = null;
             }
         }
     }
