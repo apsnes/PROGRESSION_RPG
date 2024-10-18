@@ -34,7 +34,10 @@ namespace Engine.Factories
             if (RandomNumberGenerator.NumberBetween(1, 100) <= percentage)
             {
                 maxCount = RandomNumberGenerator.NumberBetween(1, maxCount + 1);
-                monster.Inventory.Add(new ItemQuantity(itemID, maxCount));
+                for (int i = 0; i < maxCount; i++)
+                {
+                    monster.Inventory.Add(new ItemQuantity(itemID, 1));
+                }
             }
         }
     }

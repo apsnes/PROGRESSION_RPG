@@ -29,7 +29,8 @@ namespace Engine.Factories
             newWorld.LocationAt(3, -2).AddMonster(3, 6);
 
             newWorld.AddLocation(3, -1, "Rabbit Hop Town", "Sanctuary", "ComingSoon.png");
-            newWorld.LocationAt(3, -1).ObecjtivesHere.Add(ObjectiveFactory.GetObjective(1));
+            //newWorld.LocationAt(3, -1).ObecjtivesHere.Add(ObjectiveFactory.GetObjective(1));
+            newWorld.LocationAt(3, -1).ObecjtivesHere.Add(ObjectiveFactory.GetObjective(2));
 
             newWorld.AddLocation(2, -1, "Rabbit Hop Town Markets", "Sanctuary", "rabbitHopMarkets.png");
 

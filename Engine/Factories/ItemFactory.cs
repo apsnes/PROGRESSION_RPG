@@ -20,7 +20,7 @@ namespace Engine.Factories
             _gameItems.Add(new Weapon(1005, "Undead Bonestaff", 10000, 15, 105, 70));
             _gameItems.Add(new Weapon(1006, "Townspeople's Hope", 25000, 20, 200, 90));
 
-            _gameItems.Add(new Food(2001, "Mushroom Soup", 250, 1, 15));
+            _gameItems.Add(new Food(3001, "Mushroom Soup", 250, 1, 15));
 
             _gameItems.Add(new GameItem(2001, "Wild Mushroom", 50, 1));
             _gameItems.Add(new GameItem(2002, "Imp Skeleton", 110, 1));

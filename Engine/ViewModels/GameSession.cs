@@ -29,6 +29,7 @@ namespace Engine.ViewModels
                 OnPropertyChanged(nameof(HasLocationWest));
                 OnPropertyChanged(nameof(HasLocationSouth));
                 OnPropertyChanged(nameof(HasLocationEast));
+                CompleteObjectiveAtLocation();
                 GivePlayerObjectiveAtLocation();
                 GetMonsterAtLocation();
             }
@@ -124,6 +125,54 @@ namespace Engine.ViewModels
                 if (!CurrentPlayer.Objectives.Any(o => o.PlayerObjective.ID == objective.ID))
                 {
                     CurrentPlayer.Objectives.Add(new ObjectiveStatus(objective));
+                    RaiseMessage("");
+                    RaiseMessage($"New objective obtained: {objective.Name}.");
+                    RaiseMessage(objective.Description);
+                    RaiseMessage("Return with:");
+                    foreach (ItemQuantity itemQuantity in objective.RequiredItems)
+                    {
+                        if (itemQuantity.Quantity > 1)
+                        {
+                            RaiseMessage($"{itemQuantity.Quantity} {ItemFactory.CreateGameItem(itemQuantity.ItemID).Name}s");
+                        }
+                        else
+                        {
+                            RaiseMessage($"{itemQuantity.Quantity} {ItemFactory.CreateGameItem(itemQuantity.ItemID).Name}");
+                        }
+                    }
+                    RaiseMessage($"Rewards: {objective.RewardEXP} EXP, {objective.RewardGold} Gold.");
+                }
+            }
+        }
+        private void CompleteObjectiveAtLocation()
+        {
+            foreach (Objective objective in CurrentLocation.ObecjtivesHere)
+            {
+                ObjectiveStatus objectiveToComplete = CurrentPlayer.Objectives.FirstOrDefault(o => o.PlayerObjective.ID == objective.ID && !o.IsCompleted);
+                if (objectiveToComplete != null)
+                {
+                    if (CurrentPlayer.HasTheseItems(objective.RequiredItems))
+                    {
+                        foreach (ItemQuantity itemQuantity in objective.RequiredItems)
+                        {
+                            for (int i = 0; i < itemQuantity.Quantity; i++)
+                            {
+                                CurrentPlayer.RemoveItemFromInventory(CurrentPlayer.Inventory.First(item => item.ItemID == itemQuantity.ItemID));
+                            }
+                        }
+                        RaiseMessage($"You completed the objective: {objective.Name}.");
+                        CurrentPlayer.EXP += objective.RewardEXP;
+                        CurrentPlayer.Gold += objective.RewardGold;
+                        foreach(ItemQuantity itemQuantity in objective.RewardItems)
+                        {
+                            GameItem reward = ItemFactory.CreateGameItem(itemQuantity.ItemID);
+                            CurrentPlayer.AddItemToInventory(reward);
+                            RaiseMessage($"You receive a {reward.Name}.");
+                        }
+                        RaiseMessage($"You receive {objective.RewardEXP} EXP.");
+                        RaiseMessage($"You receive {objective.RewardGold} Gold.");
+                        objectiveToComplete.IsCompleted = true;
+                    }
                 }
             }
         }

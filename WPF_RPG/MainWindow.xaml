@@ -121,15 +121,16 @@
             <Grid Grid.Row="2" Grid.Column="0" Background="#290EA0">
                 <TabControl>
                     <TabItem Header="Inventory" FontSize="14" HorizontalAlignment="Center">
-                        <DataGrid ItemsSource="{Binding CurrentPlayer.Inventory}" IsReadOnly="True" AutoGenerateColumns="False" HeadersVisibility="Column">
+                        <DataGrid ItemsSource="{Binding CurrentPlayer.Inventory}" VerticalScrollBarVisibility="Auto" IsReadOnly="True" AutoGenerateColumns="False" HeadersVisibility="Column">
                             <DataGrid.Columns>
                                 <DataGridTextColumn Header="Description" Binding="{Binding Name}" Width="*"/>
                                 <DataGridTextColumn Header="Item Level" Binding="{Binding ItemLevel}" Width="Auto"/>
+                                <DataGridTextColumn Header="Quantity" Binding="{Binding ItemLevel}" Width="Auto"/>
                             </DataGrid.Columns>
                         </DataGrid>
                     </TabItem>
                     <TabItem Header="Objectives">
-                        <DataGrid ItemsSource="{Binding CurrentPlayer.Objectives}" IsReadOnly="True" AutoGenerateColumns="False" HeadersVisibility="Column">
+                        <DataGrid ItemsSource="{Binding CurrentPlayer.Objectives}" VerticalScrollBarVisibility="Auto" IsReadOnly="True" AutoGenerateColumns="False" HeadersVisibility="Column">
                             <DataGrid.Columns>
                                 <DataGridTextColumn Header="Name" Binding="{Binding PlayerObjective.Name}" Width="*"/>
                                 <DataGridTextColumn Header="Complete" Binding="{Binding IsCompleted}" Width="Auto"/>
