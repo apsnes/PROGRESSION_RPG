@@ -235,7 +235,7 @@ namespace Engine.ViewModels
             int damage = RandomNumberGenerator.NumberBetween((CurrentWeapon.Power - CurrentWeapon.Power / 10), (CurrentWeapon.Power + CurrentWeapon.Power / 10));
             if (damage <= 0)
             {
-                RaiseMessage($"Your attack missed the {CurrentMonster.Name}!");
+                RaiseMessage($"The {CurrentMonster.Name} evaded your attack.");
             }
             else
             {
@@ -281,7 +281,7 @@ namespace Engine.ViewModels
                     int playerDmg = RandomNumberGenerator.NumberBetween((CurrentMonster.DamagePower - CurrentMonster.DamagePower / 10) - CurrentWeapon.Defence, (CurrentMonster.DamagePower + CurrentMonster.DamagePower / 10) - CurrentWeapon.Defence);
                     if (playerDmg <= 0)
                     {
-                        RaiseMessage($"The {CurrentMonster.Name}'s attack missed you!");
+                        RaiseMessage($"You evaded the {CurrentMonster.Name}s attack!");
                     }
                     else
                     {

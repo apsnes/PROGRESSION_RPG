@@ -109,6 +109,8 @@
                     <Image Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" Height="125" Width="125" Source="{Binding CurrentMonster.ImageName}"/>
                     <StackPanel Grid.Row="2" Visibility="{Binding HasMonster, Converter={StaticResource BooleanToVisibility}}" HorizontalAlignment="Center" Orientation="Horizontal">
                         <TextBlock Text="HP: "/>
+                        <TextBlock Text="{Binding CurrentMonster.HP}"/>
+                        <TextBlock Text="     "/>
                         <TextBlock Text="{Binding CurrentMonster.HPPercentage}"/>
                         <TextBlock>%</TextBlock>
                     </StackPanel>
@@ -124,8 +126,8 @@
                         <DataGrid ItemsSource="{Binding CurrentPlayer.Inventory}" VerticalScrollBarVisibility="Auto" IsReadOnly="True" AutoGenerateColumns="False" HeadersVisibility="Column">
                             <DataGrid.Columns>
                                 <DataGridTextColumn Header="Description" Binding="{Binding Name}" Width="*"/>
-                                <DataGridTextColumn Header="ILevel" Binding="{Binding ItemLevel}" Width="Auto"/>
-                                <DataGridTextColumn Header="Quantity" Binding="{Binding ItemLevel}" Width="Auto"/>
+                                <DataGridTextColumn Header="Power" Binding="{Binding Power}" Width="Auto"/>
+                                <DataGridTextColumn Header="Defence" Binding="{Binding Defence}" Width="Auto"/>
                             </DataGrid.Columns>
                         </DataGrid>
                     </TabItem>

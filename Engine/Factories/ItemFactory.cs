@@ -19,7 +19,7 @@ namespace Engine.Factories
             _gameItems.Add(new Weapon(1004, "Heavy Blacksmith's Rod", "pack://application:,,,/Engine;component/Images/Weapons/tempWeapon.png", 10000, 15, 140, 35));
             _gameItems.Add(new Weapon(1005, "Undead Bonestaff", "pack://application:,,,/Engine;component/Images/Weapons/tempWeapon.png", 10000, 20, 105, 70));
             _gameItems.Add(new Weapon(1006, "Townspeople's Hope", "pack://application:,,,/Engine;component/Images/Weapons/tempWeapon.png", 25000, 25, 200, 90));
-            _gameItems.Add(new Weapon(1007, "Arcane OakStaff", "pack://application:,,,/Engine;component/Images/Weapons/tempWeapon.png", 6000, 15, 20, 4));
+            _gameItems.Add(new Weapon(1007, "Arcane OakStaff", "pack://application:,,,/Engine;component/Images/Weapons/tempWeapon.png", 6000, 5, 20, 4));
 
             _gameItems.Add(new Food(3001, "Mushroom Soup", 250, 1, 50));
             _gameItems.Add(new Food(3002, "Carrot Surprise", 1000, 1, 200));
