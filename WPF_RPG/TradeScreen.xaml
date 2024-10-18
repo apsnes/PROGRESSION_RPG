@@ -9,7 +9,7 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterOwner"
         FontSize="12pt"
-        Title="TradeScreen" Height="360" Width="640">
+        Title="TradeScreen" Height="432" Width="768">
     <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>

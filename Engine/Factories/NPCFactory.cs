@@ -19,6 +19,16 @@ namespace Engine.Factories
             mango.AddItemToInventory(ItemFactory.CreateGameItem(3001));
             mango.AddItemToInventory(ItemFactory.CreateGameItem(3001));
             mango.AddItemToInventory(ItemFactory.CreateGameItem(3001));
+            mango.AddItemToInventory(ItemFactory.CreateGameItem(3002));
+            mango.AddItemToInventory(ItemFactory.CreateGameItem(3002));
+            mango.AddItemToInventory(ItemFactory.CreateGameItem(3002));
+            mango.AddItemToInventory(ItemFactory.CreateGameItem(3002));
+            mango.AddItemToInventory(ItemFactory.CreateGameItem(3002));
+            mango.AddItemToInventory(ItemFactory.CreateGameItem(3003));
+            mango.AddItemToInventory(ItemFactory.CreateGameItem(3003));
+            mango.AddItemToInventory(ItemFactory.CreateGameItem(3003));
+            mango.AddItemToInventory(ItemFactory.CreateGameItem(3003));
+            mango.AddItemToInventory(ItemFactory.CreateGameItem(3003));
             mango.AddItemToInventory(ItemFactory.CreateGameItem(2003));
             mango.AddItemToInventory(ItemFactory.CreateGameItem(2004));
 

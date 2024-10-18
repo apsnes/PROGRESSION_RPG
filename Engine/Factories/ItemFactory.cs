@@ -21,7 +21,9 @@ namespace Engine.Factories
             _gameItems.Add(new Weapon(1006, "Townspeople's Hope", "pack://application:,,,/Engine;component/Images/Weapons/tempWeapon.png", 25000, 25, 200, 90));
             _gameItems.Add(new Weapon(1007, "Arcane OakStaff", "pack://application:,,,/Engine;component/Images/Weapons/tempWeapon.png", 6000, 15, 20, 4));
 
-            _gameItems.Add(new Food(3001, "Mushroom Soup", 250, 1, 15));
+            _gameItems.Add(new Food(3001, "Mushroom Soup", 250, 1, 50));
+            _gameItems.Add(new Food(3002, "Carrot Surprise", 1000, 1, 200));
+            _gameItems.Add(new Food(3003, "Rabbit Queen's Banquet", 10000, 1, 2000));
 
             _gameItems.Add(new GameItem(2001, "Wild Mushroom", 50, 1));
             _gameItems.Add(new GameItem(2002, "Imp Skeleton", 110, 1));
