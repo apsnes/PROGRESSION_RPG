@@ -201,6 +201,7 @@ namespace Engine.ViewModels
                             CurrentPlayer.EXP = CurrentPlayer.EXP - 1000;
                             CurrentPlayer.Level += 1;
                             CurrentPlayer.HP = CurrentPlayer.Level * 100;
+                            RaiseMessage($"You levelled up to level {CurrentPlayer.Level}!");
                         }
                         CurrentPlayer.Gold += objective.RewardGold;
                         foreach(ItemQuantity itemQuantity in objective.RewardItems)
@@ -258,6 +259,7 @@ namespace Engine.ViewModels
                         CurrentPlayer.EXP = CurrentPlayer.EXP - 1000;
                         CurrentPlayer.Level += 1;
                         CurrentPlayer.HP = CurrentPlayer.Level * 100;
+                        RaiseMessage($"You levelled up to level {CurrentPlayer.Level}!");
                     }
                     CurrentPlayer.Gold += CurrentMonster.RewardGold;
                     RaiseMessage($"You received {CurrentMonster.RewardEXP} EXP and {CurrentMonster.RewardGold} gold.");

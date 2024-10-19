@@ -8,24 +8,50 @@
 
   <ItemGroup>
     <None Remove="Images\Locations\ComingSoon.png" />
+    <None Remove="Images\Locations\evilBunnysLair.png" />
     <None Remove="Images\Locations\FirstHouse.png" />
+    <None Remove="Images\Locations\graveyard.png" />
+    <None Remove="Images\Locations\hellishCavern.png" />
     <None Remove="Images\Locations\localtrader.png" />
     <None Remove="Images\Locations\rabbitHopMarkets.png" />
+    <None Remove="Images\Locations\rabbitHopTown.png" />
     <None Remove="Images\Locations\rabbithoptrail.png" />
     <None Remove="Images\Locations\stoneForest.png" />
+    <None Remove="Images\Locations\stormyRoad.png" />
+    <None Remove="Images\Locations\tranquilRespite.png" />
     <None Remove="Images\Locations\yard.png" />
+    <None Remove="Images\Monsters\demonBunny.png" />
     <None Remove="Images\Monsters\evilbun.png" />
+    <None Remove="Images\Monsters\fireyImp.png" />
+    <None Remove="Images\Weapons\arcaneOakstaff.png" />
+    <None Remove="Images\Weapons\bunnyScepter.png" />
+    <None Remove="Images\Weapons\demonicStave.png" />
+    <None Remove="Images\Weapons\heavyBlacksmithsRod.png" />
     <None Remove="Images\Weapons\tempWeapon.png" />
+    <None Remove="Images\Weapons\townspeoplesHope.png" />
+    <None Remove="Images\Weapons\undeadBonestaff.png" />
     <None Remove="Images\Weapons\woodenstaff.png" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Images\Locations\ComingSoon.png" />
+    <Resource Include="Images\Locations\evilBunnysLair.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\Locations\FirstHouse.png" />
+    <Resource Include="Images\Locations\graveyard.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Locations\hellishCavern.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\Locations\localtrader.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\Locations\rabbitHopMarkets.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Locations\rabbitHopTown.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\Locations\rabbithoptrail.png">
@@ -34,13 +60,43 @@
     <Resource Include="Images\Locations\stoneForest.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\Locations\stormyRoad.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Locations\tranquilRespite.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\Locations\yard.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Monsters\demonBunny.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\Monsters\evilbun.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\Monsters\fireyImp.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Weapons\arcaneOakstaff.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Weapons\bunnyScepter.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Weapons\demonicStave.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Weapons\heavyBlacksmithsRod.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="Images\Weapons\tempWeapon.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Weapons\townspeoplesHope.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Weapons\undeadBonestaff.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\Weapons\woodenStaff.png">

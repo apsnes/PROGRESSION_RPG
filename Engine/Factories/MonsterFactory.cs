@@ -18,11 +18,11 @@ namespace Engine.Factories
                     AddLootItem(evilBun, 1002, 100, 1);
                     return evilBun;
                 case 2:
-                    Monsters demonBun = new Monsters("Demonic Bunny of Purgatory", "evilbun.png", 10000, 10000, 10000, 50000, 100);
+                    Monsters demonBun = new Monsters("Demonic Bunny of Purgatory", "demonBunny.png", 10000, 10000, 10000, 50000, 100);
                     AddLootItem(demonBun, 1003, 100, 1);
                     return demonBun;
                 case 3:
-                    Monsters fireyImp = new Monsters("Firey Imp", "evilbun.png", 150, 150, 100, 200, 4);
+                    Monsters fireyImp = new Monsters("Firey Imp", "fireyImp.png", 150, 150, 100, 200, 4);
                     AddLootItem(fireyImp, 2002, 80, 3);
                     return fireyImp;
                 default:
